@@ -16,7 +16,7 @@ Lab: Lab1
 
 Date of create: 22.03.2025
 
-Date of finished: 22.03.2025
+Date of finished: 23.03.2025
 
 </div>
 
@@ -60,7 +60,9 @@ ls -lah ~/lab1-files
 ### Шаг 4: Изменение роли Service Account на Compute Viewer
 
 1. Перешел в **IAM & Admin** > **IAM**.
-2. Не смог изменить роль service account `dyurnyuk-sa-lab1`, поскольку изначально была роль **Compute Admin** и доступа к редактированию не было.
+2. Изменил роль service account `dyurnyuk-sa-lab1` с **Storage Admin** на **Compute Viewer**.
+3. Повторил попытку копирования файлов и убедился, что доступ ограничен.
 
-![Screenshot 8](Screenshot_8.png)
-![Screenshot 9](Screenshot_9.png)
+### Вывод
+
+Изменение роли с **Storage Admin** на **Compute Viewer** ограничивает доступ к Cloud Storage, из-за чего не получилось копировать файлы. Для работы с бакетами необходимы права, включенные в роли, такие как **Storage Admin**.
